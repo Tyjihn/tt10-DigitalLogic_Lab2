@@ -33,7 +33,7 @@ module tt_um_DigitalLogicLab2 (
   else if (uio_in[2] == 1) assign uo_out = 4'b0010;
   else if (uio_in[1] == 1) assign uo_out = 4'b0001;
   else if (uio_in[0] == 1) assign uo_out = 4'b0000; 
-  else                     assign uo_out = 8'b111100000;
+  else                     assign uo_out = 8'b11110000;
   
   // assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
