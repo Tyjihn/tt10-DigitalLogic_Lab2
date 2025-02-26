@@ -17,26 +17,24 @@ module tt_um_DigitalLogicLab2 (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-  always @(ui_in, uio_in) 
-    begin
-      if (ui_in[7] == 1) assign uo_out = 8'b11110000;
-      else if (ui_in[6] == 1) assign uo_out = 8'b11100000;
-      else if (ui_in[5] == 1) assign uo_out = 8'b11010000;
-      else if (ui_in[4] == 1) assign uo_out = 8'b11000000;
-      else if (ui_in[3] == 1) assign uo_out = 8'b10110000;
-      else if (ui_in[2] == 1) assign uo_out = 8'b10100000;
-      else if (ui_in[1] == 1) assign uo_out = 8'b10010000;
-      else if (ui_in[0] == 1) assign uo_out = 8'b10000000;
-      else if (uio_in[7] == 1) assign uo_out = 8'b01110000;
-      else if (uio_in[6] == 1) assign uo_out = 8'b01100000;
-      else if (uio_in[5] == 1) assign uo_out = 8'b01010000;
-      else if (uio_in[4] == 1) assign uo_out = 8'b01000000;
-      else if (uio_in[3] == 1) assign uo_out = 8'b00110000;
-      else if (uio_in[2] == 1) assign uo_out = 8'b00100000;
-      else if (uio_in[1] == 1) assign uo_out = 8'b00010000;
-      else if (uio_in[0] == 1) assign uo_out = 8'b00000000; 
-      else                     assign uo_out = 8'b11110000;
-    end
+  always @(ui_in, uio_in) begin
+      if (ui_in[7] == 1)      uo_out = 8'b11110000;
+      else if (ui_in[6] == 1) uo_out = 8'b11100000;
+      else if (ui_in[5] == 1) uo_out = 8'b11010000;
+      else if (ui_in[4] == 1) uo_out = 8'b11000000;
+      else if (ui_in[3] == 1) uo_out = 8'b10110000;
+      else if (ui_in[2] == 1) uo_out = 8'b10100000;
+      else if (ui_in[1] == 1) uo_out = 8'b10010000;
+      else if (ui_in[0] == 1) uo_out = 8'b10000000;
+      else if (uio_in[7] == 1) uo_out = 8'b01110000;
+      else if (uio_in[6] == 1) uo_out = 8'b01100000;
+      else if (uio_in[5] == 1) uo_out = 8'b01010000;
+      else if (uio_in[4] == 1) uo_out = 8'b01000000;
+      else if (uio_in[3] == 1) uo_out = 8'b00110000;
+      else if (uio_in[2] == 1) uo_out = 8'b00100000;
+      else if (uio_in[1] == 1) uo_out = 8'b00010000;
+      else if (uio_in[0] == 1) uo_out = 8'b00000000; 
+      else                     uo_out = 8'b11110000;
   end
   // assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
