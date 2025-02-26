@@ -56,7 +56,40 @@ async def test_project(dut):
             dut._log.info(f"Test case ui_in={a_vals[i]}, uio_in={b_vals[j]} -> uo_out={dut.uo_out.value}")
 
             # Expected output logic (assuming sum modulo 256, replace as per DUT logic)
-            expected_uo_out = (a_vals[i] + b_vals[j]) % 256
+            if dut.ui_in[7] == 1:
+                expected_uo_out = 0b11110000
+            elif dut.ui_in[6] == 1:
+                expected_uo_out = 0b11100000
+            elif dut.ui_in[5] == 1:
+                expected_uo_out = 0b11010000
+            elif dut.ui_in[4] == 1:
+                expected_uo_out = 0b11000000
+            elif dut.ui_in[3] == 1:
+                expected_uo_out = 0b10110000
+            elif dut.ui_in[2] == 1:
+                expected_uo_out = 0b10100000
+            elif dut.ui_in[1] == 1:
+                expected_uo_out = 0b10010000
+            elif dut.ui_in[0] == 1:
+                expected_uo_out = 0b10000000
+            elif dut.uio_in[7] == 1:
+                expected_uo_out = 0b01110000
+            elif dut.uio_in[6] == 1:
+                expected_uo_out = 0b01100000
+            elif dut.uio_in[5] == 1:
+                expected_uo_out = 0b01010000
+            elif dut.uio_in[4] == 1:
+                expected_uo_out = 0b01000000
+            elif dut.uio_in[3] == 1:
+                expected_uo_out = 0b00110000
+            elif dut.uio_in[2] == 1:
+                expected_uo_out = 0b00100000
+            elif dut.uio_in[1] == 1:
+                expected_uo_out = 0b00010000
+            elif dut.uio_in[0] == 1:
+                expected_uo_out = 0b00000000
+            else:
+                expected_uo_out = 0b11110000
 
             # Assert the output matches the expected value
             assert int(dut.uo_out.value) == expected_uo_out, (
