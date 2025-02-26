@@ -17,23 +17,23 @@ module tt_um_DigitalLogicLab2 (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-assign uo_out = (ui_in[7])      ? 8'b11110000 :
-                (ui_in[6])      ? 8'b11100000 :
-                (ui_in[5])      ? 8'b11010000 :
-                (ui_in[4])      ? 8'b11000000 :
-                (ui_in[3])      ? 8'b10110000 :
-                (ui_in[2])      ? 8'b10100000 :
-                (ui_in[1])      ? 8'b10010000 :
-                (ui_in[0])      ? 8'b10000000 :
-                (uio_in[7])     ? 8'b01110000 :
-                (uio_in[6])     ? 8'b01100000 :
-                (uio_in[5])     ? 8'b01010000 :
-                (uio_in[4])     ? 8'b01000000 :
-                (uio_in[3])     ? 8'b00110000 :
-                (uio_in[2])     ? 8'b00100000 :
-                (uio_in[1])     ? 8'b00010000 :
-                (uio_in[0])     ? 8'b00000000 :
-                8'b11110000;
+  assign uo_out = (ui_in[7])      ? 8'b11110000 :
+                  (ui_in[6])      ? 8'b11100000 :
+                  (ui_in[5])      ? 8'b11010000 :
+                  (ui_in[4])      ? 8'b11000000 :
+                  (ui_in[3])      ? 8'b10110000 :
+                  (ui_in[2])      ? 8'b10100000 :
+                  (ui_in[1])      ? 8'b10010000 :
+                  (ui_in[0])      ? 8'b10000000 :
+                  (uio_in[7])     ? 8'b01110000 :
+                  (uio_in[6])     ? 8'b01100000 :
+                  (uio_in[5])     ? 8'b01010000 :
+                  (uio_in[4])     ? 8'b01000000 :
+                  (uio_in[3])     ? 8'b00110000 :
+                  (uio_in[2])     ? 8'b00100000 :
+                  (uio_in[1])     ? 8'b00010000 :
+                  (uio_in[0])     ? 8'b00000000 :
+                  8'b11110000;
     
   // assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
