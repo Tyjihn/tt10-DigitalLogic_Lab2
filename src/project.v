@@ -17,22 +17,22 @@ module tt_um_DigitalLogicLab2 (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-  if (ui_in[7] == 1) assign uo_out = 4'b1111;
-  else if (ui_in[6] == 1) assign uo_out = 4'b1110;
-  else if (ui_in[5] == 1) assign uo_out = 4'b1101;
-  else if (ui_in[4] == 1) assign uo_out = 4'b1100;
-  else if (ui_in[3] == 1) assign uo_out = 4'b1011;
-  else if (ui_in[2] == 1) assign uo_out = 4'b1010;
-  else if (ui_in[1] == 1) assign uo_out = 4'b1001;
-  else if (ui_in[0] == 1) assign uo_out = 4'b1000;
-  else if (uio_in[7] == 1) assign uo_out = 4'b0111;
-  else if (uio_in[6] == 1) assign uo_out = 4'b0110;
-  else if (uio_in[5] == 1) assign uo_out = 4'b0101;
-  else if (uio_in[4] == 1) assign uo_out = 4'b0100;
-  else if (uio_in[3] == 1) assign uo_out = 4'b0011;
-  else if (uio_in[2] == 1) assign uo_out = 4'b0010;
-  else if (uio_in[1] == 1) assign uo_out = 4'b0001;
-  else if (uio_in[0] == 1) assign uo_out = 4'b0000; 
+  if (ui_in[7] == 1) assign uo_out = 8'b11110000;
+  else if (ui_in[6] == 1) assign uo_out = 8'b11100000;
+  else if (ui_in[5] == 1) assign uo_out = 8'b11010000;
+  else if (ui_in[4] == 1) assign uo_out = 8'b11000000;
+  else if (ui_in[3] == 1) assign uo_out = 8'b10110000;
+  else if (ui_in[2] == 1) assign uo_out = 8'b10100000;
+  else if (ui_in[1] == 1) assign uo_out = 8'b10010000;
+  else if (ui_in[0] == 1) assign uo_out = 8'b10000000;
+  else if (uio_in[7] == 1) assign uo_out = 8'b01110000;
+  else if (uio_in[6] == 1) assign uo_out = 8'b01100000;
+  else if (uio_in[5] == 1) assign uo_out = 8'b01010000;
+  else if (uio_in[4] == 1) assign uo_out = 8'b01000000;
+  else if (uio_in[3] == 1) assign uo_out = 8'b00110000;
+  else if (uio_in[2] == 1) assign uo_out = 8'b00100000;
+  else if (uio_in[1] == 1) assign uo_out = 8'b00010000;
+  else if (uio_in[0] == 1) assign uo_out = 8'b00000000; 
   else                     assign uo_out = 8'b11110000;
   
   // assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
